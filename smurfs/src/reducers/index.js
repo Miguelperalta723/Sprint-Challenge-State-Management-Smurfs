@@ -1,0 +1,2 @@
+export { SmurfReducer } from "./SmurfReducer";
+
