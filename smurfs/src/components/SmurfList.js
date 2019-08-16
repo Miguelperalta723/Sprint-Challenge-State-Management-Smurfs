@@ -55,12 +55,8 @@ const handleChange = (e) => {
                     <button>add a smurf</button>
                 </form>
                 
-
-
-
-
             {props.smurfs &&
-            props.smurfs.map(smurf => <Smurf key={smurf} smurf={smurf} deleteData={props.deleteData} />)}
+            props.smurfs.map(smurf => <Smurf key={smurf.id} smurf={smurf} deleteData={props.deleteData}/>)}
         </div>
         
     )

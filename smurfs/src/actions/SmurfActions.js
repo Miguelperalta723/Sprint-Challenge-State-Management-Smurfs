@@ -6,7 +6,9 @@ export const FETCH_SMURF_DATA_FAILURE = 'FETCH_SMURF_DATA_FAILURE';
 
 export const SEND_SMURF_DATA_START = 'SEND_SMURF_DATA_START';
 export const SEND_SMURF_DATA_SUCCESS = 'SEND_SMURF_DATA_SUCCESS';
-export const SEND_SMURF_DATA_FAILURE = 'SEND_SMURF_DATA_START'
+export const SEND_SMURF_DATA_FAILURE = 'SEND_SMURF_DATA_START';
+
+export const DELETE_SMURF_DATA_START = 'DELETE_SMURF_DATA_START';
 
 
 export const getData = () => {
@@ -35,15 +37,12 @@ export const sendData = (newSmurf) => {
         console.log(res);
         dispatch({ type: SEND_SMURF_DATA_SUCCESS, payload: res.data});
       })
-      .catch(err => {
-       
-      });
   };
 }
 
 export const deleteData = (id) => {
     return dispatch => {
-    dispatch({ type: SEND_SMURF_DATA_START });
+    dispatch({ type: DELETE_SMURF_DATA_START });
     axios
       .delete(`http://localhost:3333/smurfs/${id}`)
       .then(res => {
@@ -51,9 +50,7 @@ export const deleteData = (id) => {
         console.log(res);
         // dispatch({ type: SEND_SMURF_DATA_SUCCESS, payload: res.data});
       })
-      .catch(err => {
-       
-      });
+    
   };
 }
 
