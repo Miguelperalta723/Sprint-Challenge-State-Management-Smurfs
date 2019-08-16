@@ -23,10 +23,29 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
-- [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+
+Allows the child component to access the parent component.
+
+ - [ ] In your own words, describe actions, reducers and the store and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+ 
+ 
+Action are what the user does. Reducers takes previous states and actions and then returns them to the state. Store houses all the data and the state as a whole. It is the only way to change the state.
+
+ - [ ]What is the difference between Application state and Component state? When would be a good time to use one over the other?
+ 
+ 
+Application state is global while Component state is local. Application would be good to use when you want to access it anywhere within the app while component state lives within that current state
+
+ - [ ]Describe redux-thunk, what does it allow us to do? How does it change our action-creators?
+ 
+ 
+Thunk is a middle where that allows use to call action creators, returning that functtion instead of an object. It allows you to delay an action or dispatch it based on what the user is doing.
+
+ - [ ]What is your favorite state management system you've learned and this sprint? Please explain why!
+ 
+ 
+Redux it has multiple "folders" which allows me to debug easier...given it is functioning proper.
 
 ## Project Set Up
 
